@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя библиотека</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Моя библиотека</h1>
+        <form id="bookForm">
+            <h2>Добавить книгу</h2>
+            <input type="text" name="title" placeholder="name is book" required>
+            <input type="text" name="author" placeholder="author" required>
+            <input type="number" name="year" placeholder="year start" required>
+
+            <label>
+                <input type="checkbox" name="isRead"> Прочитана
+            </label>
+            <button type="submit">добавить книгу</button>
+        </form>
+
+        <div class="filters">
+            <input type="text"
+            id="search"
+            placeholder="search of name...">
+
+            <select name="" id="readFilter">
+                <option value="">all books</option>
+                <option value="true">readed</option>
+                <option value="false">not readed</option>
+            </select>
+
+            <select name="" id="order">
+                <option value="asc">По возрастанию</option>
+                <option value="desc">По убыванию</option>
+            </select>
+        </div>
+        <div id="bookList" class="book-list"></div>
+        <p id="message"></p>
+        <button id="loadMore">загрузить еще</button>
+    </div>
+</body>
+    <script type="module" src="main.js"></script>
+</html>
